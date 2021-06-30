@@ -1,0 +1,46 @@
+{
+  "players": [
+    {
+      "firstName": "Jerry",
+      "lastName": "Rice",
+      "position": "WR",
+      "teamName": "49ers",
+      "byeWeek": 5
+    },
+    {
+      "firstName": "Joe",
+      "lastName": "Montana",
+      "position": "QB",
+      "teamName": "49ers",
+      "byeWeek": 8
+    }
+  ],
+  "courses": [
+    {
+      "userId": 1,
+      "title": "NFL 101",
+      "description": "Smash Mouth",
+      "estimatedTime": "12 hours",
+      "materialsNeeded": ""
+    },
+    {
+      "userId": 2,
+      "title": "Learn How to Program",
+      "description": "In this course, you'll learn how to write code like a pro!",
+      "estimatedTime": "6 hours",
+      "materialsNeeded": "* Notebook computer running Mac OS X or Windows\n* Text editor"
+    },
+    {
+      "userId": 2,
+      "title": "Learn How to Test Programs",
+      "description": "In this course, you'll learn how to test programs."
+    },
+    {
+      "userId": 1,
+      "title": "Debugging 101",
+      "description": "An introduction to testing and debugging your code.",
+      "estimatedTime": "4 hours",
+      "materialsNeeded": "* Notebook computer running Mac OS X or Windows\n* Text editor"
+    }
+  ]
+}
