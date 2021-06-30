@@ -7,6 +7,15 @@ import './App.css';
 
 function App() {
     const [playerData, setPlayerData] = useState([]);
+    //const [players, updatePlayers] = useState(playerData);
+
+    function handleOnDragEnd(result) {
+        if (!result.destination) return;
+        const items = Array.from(playerData);
+        const [reorderedItem] = items.splice(result.source.index, 1);
+        items.splice(result.destination.index, 0, reorderedItem);
+        setPlayerData(items);
+    }
 
     useEffect(() => {
         
@@ -19,7 +28,7 @@ function App() {
   
     const playerCard = playerData.map((player, index) =>{
     return (
-        <Draggable key={player.id} draggableId={player.position} index={index}>
+        <Draggable key={player.id} draggableId={JSON.stringify(player.id)} index={index}>
             {(provided) => (
                 <li ref={provided.innerRef} {...provided.draggableProps} {...provided.dragHandleProps}>
                      {player.firstName} {player.lastName}
@@ -32,11 +41,13 @@ function App() {
           
      
   return (
-    <DragDropContext>
+    <DragDropContext onDragEnd={handleOnDragEnd}>
         <Droppable droppableId="players">
         {(provided) => (
             <div>
-                <ul className="players" {...provided.droppableProps} ref={provided.innerRef} >{playerCard}</ul>
+                <ul className="players" {...provided.droppableProps} ref={provided.innerRef} >{playerCard}
+                    {provided.placeholder}
+                </ul>
             </div>
         )}
        
