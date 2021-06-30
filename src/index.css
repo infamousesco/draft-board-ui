@@ -13,15 +13,15 @@ code {
 }
 
 li {
-  list-style-type: none;
-  position: relative;
-  font-size: 1.5rem;
-  background-origin: padding-box;
-  margin-bottom: 100in;
+  display: flex;
+  align-items: center;
+  border: solid 2px #d0d0d0;
+  border-radius: .2em;
+  padding: .5em .8em .5em .5em;
+  margin-bottom: 1em;
   width: 250px;
-  padding: 10px;
-  background: #0e0fee;
-  color: #fff;
+  outline: black;
+  background-color: crimson;
 }
 
 /* li::before {

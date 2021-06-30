@@ -31,7 +31,7 @@ function App() {
         <Draggable key={player.id} draggableId={JSON.stringify(player.id)} index={index}>
             {(provided) => (
                 <li ref={provided.innerRef} {...provided.draggableProps} {...provided.dragHandleProps}>
-                     {player.firstName} {player.lastName}
+                     {player.firstName} {player.lastName} {player.position} {`Bye ${player.byeWeek}`}
                 </li>
             )}
         </Draggable>
